@@ -13,3 +13,11 @@ This project tests VAT discovery with a small sample of active UK companies sour
 - **Accepted:** a verified number that can be reliably linked to the target company.
 - **Ambiguous:** a valid number for which the company association is uncertain.
 - **Not found:** no candidate was discovered within the defined search process.
+
+## Sampling methodology
+
+The sample was drawn from the Companies House bulk snapshot as of August 2026. The file had 5,695,465 records and I read the CSV in blocks of 100,000 rows, because the full 2.8 GB file would not fit in memory.
+
+I kept active non-dormant companies which had a company number and company name, leaving me with a dataset of 4,617,014 records to sample from. I took a simple random sample of 50 companies from this population without pre-checking to see if the selected companies had a website or VAT number, using a fixed random seed of 42 to make the sample reproducible.
+
+This sample is from the Companies House population defined above, not the manufacturer's true list of suppliers, which was unavailable
