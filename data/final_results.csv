@@ -1,0 +1,4 @@
+company_number,company_name,vat_number,decision,decision_reason
+15460108,FAMILY HOME IMPROVEMENTS LTD,464840278,ACCEPTED,"HMRC valid; exact legal name; source page shows the matching company number and VAT number"
+08388589,ROBERT GLOVER ASSOCIATES LIMITED,155743887,ACCEPTED,"HMRC valid; equivalent legal name; HMRC address matches Companies House; source page shows the matching company number"
+13517670,BABYFAIR LTD,392175187,ACCEPTED,"HMRC valid; exact legal name and matching postcode; source page shows the matching company number and VAT number"
