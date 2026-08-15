@@ -21,3 +21,7 @@ The sample was drawn from the Companies House bulk snapshot as of August 2026. T
 I kept active non-dormant companies which had a company number and company name, leaving me with a dataset of 4,617,014 records to sample from. I took a simple random sample of 50 companies from this population without pre-checking to see if the selected companies had a website or VAT number, using a fixed random seed of 42 to make the sample reproducible.
 
 This sample is from the Companies House population defined above, not the manufacturer's true list of suppliers, which was unavailable
+
+## Website discovery
+
+For each of the 50 companies, I manually searched for an official website, limiting the process to a maximum of three Google searches per company. I identified 14 possible websites: 4 were confirmed using the company number, 5 were considered probable based on matching names and addresses, and 5 remained unconfirmed because I found no direct evidence linking them to the company. This process took around 3 hours, indicating that company-to-website discovery is a significant issue. This only reports success in website discovery, not VAT registration or VAT-number coverage.
