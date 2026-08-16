@@ -138,6 +138,19 @@ The main problem was finding the correct company website, and even then, the maj
 
 Based on these results, a high-accuracy dataset may be possible, but for a better coverage the project needs automated domain discovery, additional sources and manual review for ambiguous cases before using it at a larger scale.
 
+## Beyond the UK
+### Germany
+
+Germany has a similar VAT discovery problem, but company websites may be more useful than in the UK. In Germany, a company is required to provide an easily accessible legal notice called "Impressum". Business websites must include information such as the company identity, register number and VAT if applicable. Because of this, I would search the "Impressum" page for a VAT number, which would not guarantee a result, but could improve coverage and accuracy.
+
+**Source:https://europa.eu/youreurope/business/growing/digitalising/setting-up-business-website/index_en.htm**
+
+Verification would be different from the UK since Germany uses a tax number called "Steuernummer" and the VAT number is called "USt-IdNr". Therefore, failing to find or validate a USt-IdNr would not necessarily mean that the business is not registered for domestic VAT. A candidate could be checked through VIES, but VIES cannot discover a VAT number using the company name, and an invalid response may also mean that the number has not been activated for intra-EU transactions.
+
+**Source:https://www.gtai.de/en/invest/investment-guide/value-added-tax-561538**
+
+Most of the UK pipeline could be reused. The equivalent of Companies House from UK is German Company Register in Germany, the crawler would focus on the Impressum page, and the extractor would search for "USt-IdNr" instead of "VAT". The HMRC verification would be replaced by VIES, and company to domain matching and manual reviews would remain the same.
+
 ## Running the project
 
 The full Companies House CSV is not included in this repository because it is approximately 2.8 GB. The generated sample is already included.
